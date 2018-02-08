@@ -17,10 +17,122 @@ When you save the notebook, an HTML file containing the code and output will be 
 
 The preview shows you a rendered HTML copy of the contents of the editor. Consequently, unlike *Knit*, *Preview* does not run any R code chunks. Instead, the output of the chunk when it was last run in the editor is displayed.
 
-```{r types}
+##StartofNotes
 
+```{r vectors}
+# Comments are for cool kids 
+vector_1 <- c(1,2,3,4,5)
+
+vector_1
 
 ```
+
+```{r}
+#Longer Code String
+vector_2<- c(1:88)
+vector_2
+```
+
+```{r strings}
+
+string_1 <- c("abc", "def", "ghi")
+
+string_1
+typeof(string_1)
+typeof(vector_1)
+length(string_1)
+```
+
+```{r logicals}
+# a vector of true/false
+
+t_f <- c(TRUE, FALSE, T, F)
+t_f
+
+```
+
+
+```{r factors}
+#start with a string
+factor_1 <- c("a", "b", "c", "a", "b")
+
+#use coercion to make it a factor
+factor_2 <- as.factor(factor_1)
+
+factor_2
+```
+
+
+## Matrix Operations
+#Use %% to get legit matrix algebra by wrapping code
+
+```{r vector add}
+#add two vectors
+
+vector_add <- vector_1 + vector_1
+
+vector_add
+
+vector_multi <- vector_1 * vector_1
+
+vector_multi
+```
+
+```{r arrays}
+
+array_1 <- rbind(vector_1, c(5:8))
+
+array_1
+
+array_2 <- cbind(vector_1, c(5:8))
+array_2
+#Cbind also used for columns
+```
+
+
+```{r dimensions}
+
+length(array_1)
+
+dim(array_1)
+
+dim(array_2)
+```
+
+```{r arrays}
+
+typeof(array_1)
+
+```
+
+```{r indexing}
+
+length(vector_2)
+
+#find the 8th element of the vector
+
+vector_2[8]
+
+#same but 7-36
+
+vector_2[1:42]
+
+#Random variables selected
+vector_2[c(3,2,56,9)]
+
+
+#multi-dimensional index
+
+array_1[2,4]
+
+array_1
+
+```
+
+
+
+
+
 
 
 
